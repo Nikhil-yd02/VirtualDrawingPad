@@ -13,7 +13,8 @@ print('Enter Esc To exit.')
 cap = cv.VideoCapture(0)
 
 # creating track bar to find threshold for mask:
-cv.namedWindow('TrackBar')
+cv.namedWindow('TrackBar', 0)
+cv.resizeWindow('TrackBar', 256, 256)
 cv.createTrackbar('L-H', 'TrackBar', 0, 255, nothing)
 cv.createTrackbar('L-S', 'TrackBar', 0, 255, nothing)
 cv.createTrackbar('L-V', 'TrackBar', 0, 255, nothing)
@@ -22,7 +23,8 @@ cv.createTrackbar('U-S', 'TrackBar', 0, 255, nothing)
 cv.createTrackbar('U-V', 'TrackBar', 0, 255, nothing)
 
 # creating track bar for color and thickness of brush:
-cv.namedWindow('COLOR TrackBar')
+cv.namedWindow('COLOR TrackBar', 0)
+cv.resizeWindow('COLOR TrackBar', 256, 256)
 cv.createTrackbar('B', 'COLOR TrackBar', 0, 255, nothing)
 cv.createTrackbar('G', 'COLOR TrackBar', 0, 255, nothing)
 cv.createTrackbar('R', 'COLOR TrackBar', 0, 255, nothing)
