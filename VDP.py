@@ -43,7 +43,7 @@ while True:
     _, frame = cap.read()
     frame = cv.flip(frame, 1)
     hsv = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
-    blur = cv.GaussianBlur(hsv, (5, 5), 100)
+    blur = cv.GaussianBlur(hsv, (5, 5), 40)
 
     # get current positions of Track-bar:
     lh = cv.getTrackbarPos('L-H', 'TrackBar')
